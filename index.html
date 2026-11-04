@@ -39,7 +39,16 @@
       <div class="map-shell" id="map-view" hidden><div id="map" aria-label="Map of Gurudwaras"></div><p class="map-note">Map data © OpenStreetMap contributors</p></div>
     </section>
 
-    <section class="events-section" id="events"><div class="section-heading light-heading"><div><p class="eyebrow">Gather in sangat</p><h2>Events to come together for</h2></div><p>Celebrations, kirtan, seva, and community gatherings from Gurudwaras in the directory.</p></div><div class="event-grid" id="event-list"></div></section>
+    <section class="events-section" id="events">
+      <div class="section-heading light-heading"><div><p class="eyebrow">Gather in sangat</p><h2>A weekly rhythm of prayer and seva</h2></div><p>Many Gurudwaras hold programs on Wednesday, Friday, and Sunday. Exact times and activities vary, so confirm with the Gurudwara before visiting.</p></div>
+      <div class="weekly-rhythm" aria-label="Typical weekly Gurudwara programs">
+        <article class="weekly-card"><span class="day-number">01</span><p>Wednesday</p><h3>Midweek Diwan</h3><span>Rehras Sahib, kirtan, or a community program</span></article>
+        <article class="weekly-card"><span class="day-number">02</span><p>Friday</p><h3>Evening Diwan</h3><span>Kirtan, katha, Ardaas, and langar</span></article>
+        <article class="weekly-card featured"><span class="day-number">03</span><p>Sunday</p><h3>Main Diwan &amp; Langar</h3><span>Family sangat, children’s programs, and seva</span></article>
+      </div>
+      <div class="directory-events-heading"><p class="eyebrow">From the directory</p><h3>Featured programs</h3></div>
+      <div class="event-grid" id="event-list"></div>
+    </section>
     <section class="contribute-section"><span class="large-symbol">ੴ</span><div><p class="eyebrow">Built by the community</p><h2>Help the directory grow.</h2><p>Know a Gurudwara that is missing? Share its details so more people can find their local sangat.</p></div><button class="primary-button" id="suggest-bottom">Suggest a Gurudwara</button></section>
   </main>
 
@@ -49,6 +58,6 @@
   <dialog id="suggest-dialog" class="dialog-shell form-dialog"><button class="close-button" data-close="suggest-dialog" aria-label="Close">×</button><p class="eyebrow">Community contribution</p><h2>Suggest a Gurudwara</h2><p>Submissions are saved on this device in the prototype.</p>
     <form id="suggest-form"><label>Name<input name="name" required placeholder="Gurudwara name"></label><label>Address<input name="address" required placeholder="Street, city, country"></label><div class="two-column"><label>Phone<input name="phone" type="tel" placeholder="Optional"></label><label>Opening hours<input name="hours" placeholder="Optional"></label></div><label>Broadcast link<input name="broadcast" type="url" placeholder="https://... (optional)"></label><button class="primary-button">Save suggestion</button></form><p class="form-message" id="form-message" aria-live="polite"></p>
   </dialog>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><script src="data.js?v=2"></script><script src="app.js?v=2"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><script src="data.js?v=3"></script><script src="app.js?v=3"></script>
 </body>
 </html>
