@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Find Gurudwaras, events, directions, and broadcasts worldwide.">
+  <title>Sangat — Gurudwara Finder</title>
+  <link rel="preconnect" href="https://unpkg.com"><link rel="preconnect" href="https://tile.openstreetmap.org">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top"><span class="brand-mark">ੴ</span><span>Sangat</span></a>
+    <nav><a href="#explore">Explore</a><a href="#events">Events</a><button class="text-button" id="favorites-nav">Saved <span id="favorite-count">0</span></button></nav>
+    <button class="outline-button desktop-only" id="suggest-button">Suggest a Gurudwara</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A home for the global sangat</p>
+        <h1>Find a Gurudwara,<br><em>wherever you are.</em></h1>
+        <p class="hero-description">Discover nearby Gurudwaras, plan a visit, join upcoming events, and connect with broadcasts from around the world.</p>
+        <form class="search-box" id="search-form" role="search">
+          <label class="sr-only" for="search-input">Search by Gurudwara, city, or country</label><span class="search-icon">⌕</span>
+          <input id="search-input" type="search" placeholder="Search Gurudwara, city, or country" autocomplete="off"><button class="primary-button">Search</button>
+        </form>
+        <div class="hero-actions"><button class="location-button" id="location-button"><span>◎</span> Use my location</button><p id="location-status" aria-live="polite">Location stays on your device.</p></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="dome dome-back"></div><div class="dome dome-front"></div><div class="flag-pole"><span></span></div><div class="reflection"></div></div>
+    </section>
+
+    <section class="explore-section" id="explore">
+      <div class="section-heading"><div><p class="eyebrow" id="result-kicker">Explore the directory</p><h2 id="results-title">Gurudwaras around the world</h2></div>
+        <div class="view-toggle" aria-label="Choose view"><button class="active" data-view="list" aria-pressed="true">List</button><button data-view="map" aria-pressed="false">Map</button></div>
+      </div>
+      <div class="filter-row"><button class="filter-chip active" data-filter="all">All</button><button class="filter-chip" data-filter="broadcast"><span class="live-dot"></span> Broadcasts</button><button class="filter-chip" data-filter="events">Upcoming events</button><button class="filter-chip" data-filter="favorites">Saved</button></div>
+      <div id="list-view"><div class="card-grid" id="gurudwara-list"></div><div class="empty-state" id="empty-state" hidden><span>⌕</span><h3>No Gurudwaras found</h3><p>Try another name, city, or country.</p><button class="outline-button" id="clear-search">Clear search</button></div></div>
+      <div class="map-shell" id="map-view" hidden><div id="map" aria-label="Map of Gurudwaras"></div><p class="map-note">Map data © OpenStreetMap contributors</p></div>
+    </section>
+
+    <section class="events-section" id="events"><div class="section-heading light-heading"><div><p class="eyebrow">Gather in sangat</p><h2>Events to come together for</h2></div><p>Celebrations, kirtan, seva, and community gatherings from Gurudwaras in the directory.</p></div><div class="event-grid" id="event-list"></div></section>
+    <section class="contribute-section"><span class="large-symbol">ੴ</span><div><p class="eyebrow">Built by the community</p><h2>Help the directory grow.</h2><p>Know a Gurudwara that is missing? Share its details so more people can find their local sangat.</p></div><button class="primary-button" id="suggest-bottom">Suggest a Gurudwara</button></section>
+  </main>
+
+  <footer><a class="brand" href="#top"><span class="brand-mark">ੴ</span><span>Sangat</span></a><p>Made with seva for the global Sikh community.</p><p class="demo-note">Prototype directory — verify details before travelling.</p></footer>
+
+  <dialog id="details-dialog" class="dialog-shell"><button class="close-button" data-close="details-dialog" aria-label="Close">×</button><div id="details-content"></div></dialog>
+  <dialog id="suggest-dialog" class="dialog-shell form-dialog"><button class="close-button" data-close="suggest-dialog" aria-label="Close">×</button><p class="eyebrow">Community contribution</p><h2>Suggest a Gurudwara</h2><p>Submissions are saved on this device in the prototype.</p>
+    <form id="suggest-form"><label>Name<input name="name" required placeholder="Gurudwara name"></label><label>Address<input name="address" required placeholder="Street, city, country"></label><div class="two-column"><label>Phone<input name="phone" type="tel" placeholder="Optional"></label><label>Opening hours<input name="hours" placeholder="Optional"></label></div><label>Broadcast link<input name="broadcast" type="url" placeholder="https://... (optional)"></label><button class="primary-button">Save suggestion</button></form><p class="form-message" id="form-message" aria-live="polite"></p>
+  </dialog>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><script src="data.js"></script><script src="app.js"></script>
+</body>
+</html>
