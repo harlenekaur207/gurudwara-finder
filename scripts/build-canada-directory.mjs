@@ -5,6 +5,9 @@ import { dirname, resolve } from "node:path";
 const BASE = "https://gurdwaras.com";
 const ROOT = `${BASE}/directory/canada`;
 const here = dirname(fileURLToPath(import.meta.url));
+const EXCLUDED_NAMES = new Set([
+  "sikh virasat",
+]);
 const clean = value => value.replace(/<[^>]+>/g, " ").replace(/&amp;/g, "&").replace(/&#x27;/g, "'").replace(/&quot;/g, '"').replace(/\s+/g, " ").trim();
 const titleCase = slug => slug.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 
@@ -32,7 +35,7 @@ for (let index = 0; index < provinceSlugs.length; index += 4) {
     }
     for (const [path, label] of candidates) {
       const [name, city = ""] = label.split(" — ").map(part => part.trim());
-      if (!name || name.length > 120) continue;
+      if (!name || name.length > 120 || EXCLUDED_NAMES.has(name.toLowerCase())) continue;
       records.push({ id: `canada-${path.split("-").at(-1)}`, name, city, state: province, country: "Canada", url: `${BASE}${path}` });
     }
   }
