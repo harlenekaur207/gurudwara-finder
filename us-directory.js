@@ -50,13 +50,6 @@ window.US_GURUDWARAS = [
     "url": "https://gurdwaras.com/gurdwara/nishkam-seva-gurdwara-sahib-26fe7331"
   },
   {
-    "id": "directory-e707138d",
-    "name": "Nirankari Satsang Bhawan",
-    "city": "Mesa",
-    "state": "Arizona",
-    "url": "https://gurdwaras.com/gurdwara/nirankari-satsang-bhawan-e707138d"
-  },
-  {
     "id": "directory-fd5b1f19",
     "name": "Arizona Sikh Gurdwara",
     "city": "Phoenix",
@@ -722,13 +715,6 @@ window.US_GURUDWARAS = [
     "url": "https://gurdwaras.com/gurdwara/gurdwara-harmandir-sahib-e9641ac1"
   },
   {
-    "id": "directory-d75f7a82",
-    "name": "Rakasbeda",
-    "city": "Washington",
-    "state": "District Of Columbia",
-    "url": "https://gurdwaras.com/gurdwara/rakasbeda-d75f7a82"
-  },
-  {
     "id": "directory-a294954d",
     "name": "Sikh Gurdwara DC",
     "city": "Washington",
@@ -804,13 +790,6 @@ window.US_GURUDWARAS = [
     "city": "Evans",
     "state": "Georgia",
     "url": "https://gurdwaras.com/gurdwara/guru-singh-sabha-of-augusta-65744ce5"
-  },
-  {
-    "id": "directory-434b76a0",
-    "name": "Fort gaines ga",
-    "city": "Fort Gaines",
-    "state": "Georgia",
-    "url": "https://gurdwaras.com/gurdwara/fort-gaines-ga-434b76a0"
   },
   {
     "id": "directory-7aea9a87",
@@ -965,13 +944,6 @@ window.US_GURUDWARAS = [
     "city": "Greenwood",
     "state": "Indiana",
     "url": "https://gurdwaras.com/gurdwara/gurudwara-shaheedan-inc-8df6834a"
-  },
-  {
-    "id": "directory-832265b2",
-    "name": "Deer Horn",
-    "city": "Guilford",
-    "state": "Indiana",
-    "url": "https://gurdwaras.com/gurdwara/deer-horn-832265b2"
   },
   {
     "id": "directory-e81f5289",
@@ -1149,13 +1121,6 @@ window.US_GURUDWARAS = [
     "url": "https://gurdwaras.com/gurdwara/sikh-association-of-baltimore-acd68d09"
   },
   {
-    "id": "directory-f3593fbc",
-    "name": "GGSF Kirtan Academy",
-    "city": "Rockville",
-    "state": "Maryland",
-    "url": "https://gurdwaras.com/gurdwara/ggsf-kirtan-academy-f3593fbc"
-  },
-  {
     "id": "directory-81bccf02",
     "name": "Guru Gobind Singh Foundation",
     "city": "Rockville",
@@ -1168,13 +1133,6 @@ window.US_GURUDWARAS = [
     "city": "Silver Spring",
     "state": "Maryland",
     "url": "https://gurdwaras.com/gurdwara/guru-nanak-foundation-of-america-e49b59ff"
-  },
-  {
-    "id": "directory-acb12701",
-    "name": "Guardian forever",
-    "city": "Boston",
-    "state": "Massachusetts",
-    "url": "https://gurdwaras.com/gurdwara/guardian-forever-acb12701"
   },
   {
     "id": "directory-45bc8e2c",
@@ -1196,13 +1154,6 @@ window.US_GURUDWARAS = [
     "city": "Westborough",
     "state": "Massachusetts",
     "url": "https://gurdwaras.com/gurdwara/westborough-gurdwara-sahib-nessc-04e009ab"
-  },
-  {
-    "id": "directory-621af74d",
-    "name": "MD kauser",
-    "city": "Woburn",
-    "state": "Massachusetts",
-    "url": "https://gurdwaras.com/gurdwara/md-kauser-621af74d"
   },
   {
     "id": "directory-cd27574c",
@@ -1280,13 +1231,6 @@ window.US_GURUDWARAS = [
     "city": "Lansing",
     "state": "Michigan",
     "url": "https://gurdwaras.com/gurdwara/mid-michigan-singh-sabha-3a07bc30"
-  },
-  {
-    "id": "directory-501b4a13",
-    "name": "AJAX1431",
-    "city": "Madison Heights",
-    "state": "Michigan",
-    "url": "https://gurdwaras.com/gurdwara/ajax1431-501b4a13"
   },
   {
     "id": "directory-d8889845",
@@ -1373,13 +1317,6 @@ window.US_GURUDWARAS = [
     "url": "https://gurdwaras.com/gurdwara/mata-gujri-sikh-society-of-cherry-hill-4091cd36"
   },
   {
-    "id": "directory-0fab05af",
-    "name": "Binder paji house",
-    "city": "Colonia",
-    "state": "New Jersey",
-    "url": "https://gurdwaras.com/gurdwara/binder-paji-house-0fab05af"
-  },
-  {
     "id": "directory-2b342e8e",
     "name": "Glen Rock Gurudwara",
     "city": "Glen Rock",
@@ -1392,13 +1329,6 @@ window.US_GURUDWARAS = [
     "city": "Jersey City",
     "state": "New Jersey",
     "url": "https://gurdwaras.com/gurdwara/nanak-naam-jahaj-gurudwara-2d2022fa"
-  },
-  {
-    "id": "directory-7862a41e",
-    "name": "jacobs house",
-    "city": "Lawrence Township",
-    "state": "New Jersey",
-    "url": "https://gurdwaras.com/gurdwara/jacobs-house-7862a41e"
   },
   {
     "id": "directory-e3e06c25",
@@ -1546,13 +1476,6 @@ window.US_GURUDWARAS = [
     "city": "New Hyde Park",
     "state": "New York",
     "url": "https://gurdwaras.com/gurdwara/darbar-sri-guru-granth-sahib-ji-db56b426"
-  },
-  {
-    "id": "directory-84ed10a7",
-    "name": "Golu mravi",
-    "city": "New York",
-    "state": "New York",
-    "url": "https://gurdwaras.com/gurdwara/golu-mravi-84ed10a7"
   },
   {
     "id": "directory-c7aa1975",
@@ -1765,13 +1688,6 @@ window.US_GURUDWARAS = [
     "url": "https://gurdwaras.com/gurdwara/gurdwara-sahib-of-dayton-3eb75a2b"
   },
   {
-    "id": "directory-66c51c58",
-    "name": "Chiesa maddy",
-    "city": "Ohio City",
-    "state": "Ohio",
-    "url": "https://gurdwaras.com/gurdwara/chiesa-maddy-66c51c58"
-  },
-  {
     "id": "directory-5e1b3c90",
     "name": "Gurdwara Guru Nanak Foundation",
     "city": "Richfield",
@@ -1784,13 +1700,6 @@ window.US_GURUDWARAS = [
     "city": "Solon",
     "state": "Ohio",
     "url": "https://gurdwaras.com/gurdwara/gurudwara-dashmesh-darbar-dc345d1b"
-  },
-  {
-    "id": "directory-9aa7dba8",
-    "name": "Three Ring Circus",
-    "city": "Tiffin",
-    "state": "Ohio",
-    "url": "https://gurdwaras.com/gurdwara/three-ring-circus-9aa7dba8"
   },
   {
     "id": "directory-b7ad53ae",
