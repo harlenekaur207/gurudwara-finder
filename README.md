@@ -5,7 +5,7 @@ A responsive web app for discovering Gurudwaras around the world. Visitors can s
 ## Features
 
 - Global search by Gurudwara, city, state, or country
-- A local snapshot of 336 U.S. directory listings across 43 regions, so state searches do not depend on a live API
+- Local snapshots of 336 U.S. and 163 Canadian directory listings, so state and province searches do not depend on a live API
 - Browser-based location sorting; coordinates never leave the device
 - Interactive OpenStreetMap map powered by Leaflet
 - Profiles with address, phone, hours, recurring events, and directions
@@ -27,4 +27,4 @@ In **Settings → Pages**, choose **Deploy from a branch**, then select `main` a
 
 ## Data note
 
-This starter directory uses public-facing information, including a generated snapshot of the public Gurdwaras.com U.S. directory. Contact details, hours, events, and broadcasts change, so visitors should verify details before travelling. A production release should use a moderated database and allow Gurudwaras to manage their profiles.
+This starter directory uses public-facing information, including generated snapshots of the public Gurdwaras.com U.S. and Canadian directories. Contact details, hours, events, and broadcasts change, so visitors should verify details before travelling. A production release should use a moderated database and allow Gurudwaras to manage their profiles.
