@@ -865,14 +865,6 @@ window.CANADA_GURUDWARAS = [
     "url": "https://gurdwaras.com/gurdwara/sikh-heritage-centre-f6e8ef6a"
   },
   {
-    "id": "canada-318cf01e",
-    "name": "Sikh Virasat",
-    "city": "Brampton",
-    "state": "Ontario",
-    "country": "Canada",
-    "url": "https://gurdwaras.com/gurdwara/sikh-virasat-318cf01e"
-  },
-  {
     "id": "canada-724aa65b",
     "name": "Sri Guru Nanak Sikh Centre Brampton",
     "city": "Brampton",
