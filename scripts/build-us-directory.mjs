@@ -23,14 +23,16 @@ for (let index = 0; index < stateSlugs.length; index += 6) {
   const pages = await Promise.all(batch.map(async slug => ({ slug, html: await fetchText(`${ROOT}/${slug}`) })));
   for (const { slug, html } of pages) {
     const state = titleCase(slug);
-    const seen = new Set();
+    const candidates = new Map();
     for (const match of html.matchAll(/href="(\/gurdwara\/[^"]+)"[^>]*>(.*?)<\/a>/g)) {
       const path = match[1];
       const label = clean(match[2]);
-      if (!label.includes(" — ") || seen.has(path)) continue;
+      if (!label.includes(" — ")) continue;
+      if (!candidates.has(path) || label.length < candidates.get(path).length) candidates.set(path, label);
+    }
+    for (const [path, label] of candidates) {
       const [name, city = ""] = label.split(" — ").map(part => part.trim());
       if (!name || name.length > 120) continue;
-      seen.add(path);
       records.push({ id: `directory-${path.split("-").at(-1)}`, name, city, state, url: `${BASE}${path}` });
     }
   }
