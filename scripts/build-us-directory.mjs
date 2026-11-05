@@ -19,6 +19,31 @@ async function fetchText(url) {
   return response.text();
 }
 
+function profilePhoto(html) {
+  const match = html.match(/<meta\s+property="og:image"\s+content="([^"]+)"/i);
+  const url = match?.[1]?.replace(/&amp;/g, "&") || "";
+  return /supabase\.co\/storage\/v1\/object\/public\/photos\/gurdwaras\//i.test(url) ? url : "";
+}
+
+async function addProfilePhotos(items) {
+  let photoCount = 0;
+  for (let index = 0; index < items.length; index += 8) {
+    const batch = items.slice(index, index + 8);
+    await Promise.all(batch.map(async record => {
+      try {
+        const photoUrl = profilePhoto(await fetchText(record.url));
+        if (photoUrl) {
+          record.photoUrl = photoUrl;
+          photoCount += 1;
+        }
+      } catch (error) {
+        console.warn(`Photo unavailable for ${record.name}: ${error.message}`);
+      }
+    }));
+  }
+  return photoCount;
+}
+
 const rootHtml = await fetchText(ROOT);
 const stateSlugs = [...new Set([...rootHtml.matchAll(/href="\/directory\/united-states\/([a-z0-9-]+)"/g)].map(match => match[1]))];
 const records = [];
@@ -44,6 +69,7 @@ for (let index = 0; index < stateSlugs.length; index += 6) {
 }
 
 records.sort((a, b) => a.state.localeCompare(b.state) || a.city.localeCompare(b.city) || a.name.localeCompare(b.name));
+const photoCount = await addProfilePhotos(records);
 const output = `// Generated from the public Gurdwaras.com U.S. directory.\nwindow.US_GURUDWARAS = ${JSON.stringify(records, null, 2)};\n`;
 await writeFile(resolve(here, "..", "us-directory.js"), output, "utf8");
-console.log(`Wrote ${records.length} Gurudwaras across ${new Set(records.map(record => record.state)).size} regions.`);
+console.log(`Wrote ${records.length} Gurudwaras with ${photoCount} photos across ${new Set(records.map(record => record.state)).size} regions.`);
