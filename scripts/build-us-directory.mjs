@@ -7,6 +7,11 @@ const ROOT = `${BASE}/directory/united-states`;
 const here = dirname(fileURLToPath(import.meta.url));
 const clean = value => value.replace(/<[^>]+>/g, " ").replace(/&amp;/g, "&").replace(/&#x27;/g, "'").replace(/&quot;/g, '"').replace(/\s+/g, " ").trim();
 const titleCase = slug => slug.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+const EXCLUDED_NAMES = new Set([
+  "ajax1431", "binder paji house", "chiesa maddy", "deer horn", "fort gaines ga",
+  "ggsf kirtan academy", "golu mravi", "guardian forever", "jacobs house", "md kauser",
+  "nirankari satsang bhawan", "rakasbeda", "three ring circus"
+]);
 
 async function fetchText(url) {
   const response = await fetch(url, { headers: { "User-Agent": "SangatGurudwaraFinder/1.0" } });
@@ -32,7 +37,7 @@ for (let index = 0; index < stateSlugs.length; index += 6) {
     }
     for (const [path, label] of candidates) {
       const [name, city = ""] = label.split(" — ").map(part => part.trim());
-      if (!name || name.length > 120) continue;
+      if (!name || name.length > 120 || EXCLUDED_NAMES.has(name.toLowerCase())) continue;
       records.push({ id: `directory-${path.split("-").at(-1)}`, name, city, state, url: `${BASE}${path}` });
     }
   }
