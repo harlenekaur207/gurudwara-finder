@@ -92,27 +92,6 @@ window.US_GURUDWARAS = [
     "url": "https://gurdwaras.com/gurdwara/sikh-religious-society-of-little-rock-033baab5"
   },
   {
-    "id": "directory-0a563c82",
-    "name": "Gurdwara Sahib Fremont Fremont Verified",
-    "city": "An admin confirmed this listing. Gurdwara Sahib Fremont is a prominent Sikh gurdwara serving the Fremont and Tri-City area in California's Bay Area. The gurdwara offers dail…",
-    "state": "California",
-    "url": "https://gurdwaras.com/gurdwara/gurdwara-sahib-fremont-0a563c82"
-  },
-  {
-    "id": "directory-e195ea68",
-    "name": "Guru Nanak Mission Yuba City Yuba City Verified",
-    "city": "An admin confirmed this listing. Guru Nanak Mission Yuba City is a Sikh place of worship located in Yuba City, California, United States. Contact: +1-530-6744564. The Gurdwa…",
-    "state": "California",
-    "url": "https://gurdwaras.com/gurdwara/guru-nanak-mission-yuba-city-e195ea68"
-  },
-  {
-    "id": "directory-2056d8c3",
-    "name": "Gurdwara Sahib San Jose San Jose Verified",
-    "city": "An admin confirmed this listing. Sikh Gurdwara San Jose, founded in 1984 and situated on a 40-acre campus, is the largest Gurdwara in North America. The current facility was…",
-    "state": "California",
-    "url": "https://gurdwaras.com/gurdwara/gurdwara-sahib-san-jose-2056d8c3"
-  },
-  {
     "id": "directory-6bc279d4",
     "name": "Sikh Temple Redding",
     "city": "Anderson",
@@ -237,6 +216,13 @@ window.US_GURUDWARAS = [
     "city": "Fairfield",
     "state": "California",
     "url": "https://gurdwaras.com/gurdwara/guru-nanak-sikh-temple-f3f868b8"
+  },
+  {
+    "id": "directory-0a563c82",
+    "name": "Gurdwara Sahib Fremont",
+    "city": "Fremont Verified",
+    "state": "California",
+    "url": "https://gurdwaras.com/gurdwara/gurdwara-sahib-fremont-0a563c82"
   },
   {
     "id": "directory-cdcae06d",
@@ -526,6 +512,13 @@ window.US_GURUDWARAS = [
     "url": "https://gurdwaras.com/gurdwara/sikh-gurdwara-san-jose-1ae762e6"
   },
   {
+    "id": "directory-2056d8c3",
+    "name": "Gurdwara Sahib San Jose",
+    "city": "San Jose Verified",
+    "state": "California",
+    "url": "https://gurdwaras.com/gurdwara/gurdwara-sahib-san-jose-2056d8c3"
+  },
+  {
     "id": "directory-d139625d",
     "name": "Sikh Center of Orange County",
     "city": "Santa Ana",
@@ -650,6 +643,13 @@ window.US_GURUDWARAS = [
     "city": "Yuba City",
     "state": "California",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-sahib-yuba-city-c68ba6da"
+  },
+  {
+    "id": "directory-e195ea68",
+    "name": "Guru Nanak Mission Yuba City",
+    "city": "Yuba City Verified",
+    "state": "California",
+    "url": "https://gurdwaras.com/gurdwara/guru-nanak-mission-yuba-city-e195ea68"
   },
   {
     "id": "directory-1a0b1a80",
@@ -1478,13 +1478,6 @@ window.US_GURUDWARAS = [
     "url": "https://gurdwaras.com/gurdwara/hacienda-de-guru-ram-das-ashram-6cd3fa0d"
   },
   {
-    "id": "directory-890f8ef3",
-    "name": "Sikh Cultural Center Richmond Hill Richmond Hill Verified",
-    "city": "An admin confirmed this listing. Sikh Cultural Center Richmond Hill is a Sikh place of worship located in Richmond Hill, New York, United States. Contact: +1-718-8454423. Th…",
-    "state": "New York",
-    "url": "https://gurdwaras.com/gurdwara/sikh-cultural-center-richmond-hill-890f8ef3"
-  },
-  {
     "id": "directory-df3ba615",
     "name": "Gurdwara Sant Sagar",
     "city": "Bellerose",
@@ -1616,6 +1609,13 @@ window.US_GURUDWARAS = [
     "city": "Rensselaer",
     "state": "New York",
     "url": "https://gurdwaras.com/gurdwara/capital-gurudwara-312513c4"
+  },
+  {
+    "id": "directory-890f8ef3",
+    "name": "Sikh Cultural Center Richmond Hill",
+    "city": "Richmond Hill Verified",
+    "state": "New York",
+    "url": "https://gurdwaras.com/gurdwara/sikh-cultural-center-richmond-hill-890f8ef3"
   },
   {
     "id": "directory-14a04b85",
@@ -1933,13 +1933,6 @@ window.US_GURUDWARAS = [
     "url": "https://gurdwaras.com/gurdwara/sikh-center-of-the-mid-south-c22d48fb"
   },
   {
-    "id": "directory-9fe09634",
-    "name": "Sikh Center San Antonio San Antonio Verified",
-    "city": "An admin confirmed this listing. Sikh Center San Antonio is a Sikh place of worship located in San Antonio, Texas, United States. The Gurdwara serves the local Sikh communit…",
-    "state": "Texas",
-    "url": "https://gurdwaras.com/gurdwara/sikh-center-san-antonio-9fe09634"
-  },
-  {
     "id": "directory-8bd89201",
     "name": "Gurdwara Singh Sabha Austin",
     "city": "Austin",
@@ -2085,6 +2078,13 @@ window.US_GURUDWARAS = [
     "city": "San Antonio",
     "state": "Texas",
     "url": "https://gurdwaras.com/gurdwara/sikh-dharamsal-of-san-antonio-dfe4dee8"
+  },
+  {
+    "id": "directory-9fe09634",
+    "name": "Sikh Center San Antonio",
+    "city": "San Antonio Verified",
+    "state": "Texas",
+    "url": "https://gurdwaras.com/gurdwara/sikh-center-san-antonio-9fe09634"
   },
   {
     "id": "directory-14d83ab4",
