@@ -66,7 +66,8 @@ window.US_GURUDWARAS = [
     "city": "Phoenix",
     "state": "Arizona",
     "url": "https://gurdwaras.com/gurdwara/guru-nanak-dwara-96a87756",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/96a87756-6ee3-4f7e-90b7-c7b54dd7f93e/2c357f9d42ef5b23.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/96a87756-6ee3-4f7e-90b7-c7b54dd7f93e/2c357f9d42ef5b23.jpg",
+    "websiteUrl": "https://www.gurunanakdwara.com/"
   },
   {
     "id": "directory-0349126c",
@@ -279,7 +280,8 @@ window.US_GURUDWARAS = [
     "city": "Fresno",
     "state": "California",
     "url": "https://gurdwaras.com/gurdwara/sikh-institute-fresno-507ff112",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/507ff112-c700-425b-bc60-80accbd9a801/5f3cc148cb1d68f0.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/507ff112-c700-425b-bc60-80accbd9a801/5f3cc148cb1d68f0.jpg",
+    "websiteUrl": "https://www.fresnosikhs.org/"
   },
   {
     "id": "directory-3c2cb0e9",
@@ -412,7 +414,8 @@ window.US_GURUDWARAS = [
     "city": "North Hills",
     "state": "California",
     "url": "https://gurdwaras.com/gurdwara/nanak-sadan-sikh-temple-9659ef47",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/9659ef47-ec15-4a37-bd22-ea7c047ba5cb/16b76126a1ff9b1b.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/9659ef47-ec15-4a37-bd22-ea7c047ba5cb/16b76126a1ff9b1b.jpg",
+    "websiteUrl": "https://nanaksadan.org/"
   },
   {
     "id": "directory-d5dd7d9d",
@@ -689,7 +692,8 @@ window.US_GURUDWARAS = [
     "city": "West Sacramento",
     "state": "California",
     "url": "https://gurdwaras.com/gurdwara/sikh-temple-sacramento-ecbe1b5b",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/ecbe1b5b-9cec-4745-abf7-38cce22d763f/ba48c41decd5ea9d.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/ecbe1b5b-9cec-4745-abf7-38cce22d763f/ba48c41decd5ea9d.jpg",
+    "websiteUrl": "https://sikhtemple.org/"
   },
   {
     "id": "directory-c68ba6da",
@@ -744,7 +748,8 @@ window.US_GURUDWARAS = [
     "city": "Southington",
     "state": "Connecticut",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-nanak-darbar-5507e7d0",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/5507e7d0-50aa-4661-bf43-016b8f936833/4c0f8d463a5242a1.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/5507e7d0-50aa-4661-bf43-016b8f936833/4c0f8d463a5242a1.jpg",
+    "websiteUrl": "https://ctsikhs.com/"
   },
   {
     "id": "directory-251fbd05",
@@ -791,7 +796,8 @@ window.US_GURUDWARAS = [
     "city": "Washington",
     "state": "District Of Columbia",
     "url": "https://gurdwaras.com/gurdwara/sikh-gurdwara-dc-a294954d",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/a294954d-678e-4c5c-8600-496f51e64363/d796f43edec67363.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/a294954d-678e-4c5c-8600-496f51e64363/d796f43edec67363.jpg",
+    "websiteUrl": "https://sikhgurdwaradc.org/"
   },
   {
     "id": "directory-96b32b76",
@@ -886,7 +892,8 @@ window.US_GURUDWARAS = [
     "city": "Roswell",
     "state": "Georgia",
     "url": "https://gurdwaras.com/gurdwara/sewa-gurdwara-sahib-a7769022",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/a7769022-3e52-42e5-8631-4439cfe1e570/fb2097e48e616d78.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/a7769022-3e52-42e5-8631-4439cfe1e570/fb2097e48e616d78.jpg",
+    "websiteUrl": "https://www.sewageorgia.org/"
   },
   {
     "id": "directory-2cc70943",
@@ -947,7 +954,8 @@ window.US_GURUDWARAS = [
     "city": "Palatine",
     "state": "Illinois",
     "url": "https://gurdwaras.com/gurdwara/sikh-religious-society-of-chicago-gurdwara-sahib-548122ed",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/548122ed-ecdb-46c0-95be-0919450bb63b/a3c568cc69beb981.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/548122ed-ecdb-46c0-95be-0919450bb63b/a3c568cc69beb981.jpg",
+    "websiteUrl": "http://www.srsofchicago.com/"
   },
   {
     "id": "directory-e36eb363",
@@ -1159,7 +1167,8 @@ window.US_GURUDWARAS = [
     "city": "Lenexa",
     "state": "Kansas",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-sahib-kansas-city-fe03afef",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/fe03afef-b28d-4139-8ba8-630d503048f8/ad57dd040f9c8eba.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/fe03afef-b28d-4139-8ba8-630d503048f8/ad57dd040f9c8eba.jpg",
+    "websiteUrl": "https://kcmsa.org/"
   },
   {
     "id": "directory-17df72de",
@@ -1393,7 +1402,8 @@ window.US_GURUDWARAS = [
     "city": "Sterling Heights",
     "state": "Michigan",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-sahib-db62a8b6",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/db62a8b6-d83e-46e1-8ee5-20560783ca1b/f59ecd3137bb89e2.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/db62a8b6-d83e-46e1-8ee5-20560783ca1b/f59ecd3137bb89e2.jpg",
+    "websiteUrl": "https://michigangurdwara.com/"
   },
   {
     "id": "directory-8b757e82",
@@ -1401,7 +1411,8 @@ window.US_GURUDWARAS = [
     "city": "Bloomington",
     "state": "Minnesota",
     "url": "https://gurdwaras.com/gurdwara/sikh-society-of-minnesota-8b757e82",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/8b757e82-9751-4637-82dd-067f2496c0ed/3b3e2b15436a0539.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/8b757e82-9751-4637-82dd-067f2496c0ed/3b3e2b15436a0539.jpg",
+    "websiteUrl": "http://www.mnsikhs.com/"
   },
   {
     "id": "directory-cd20edfe",
@@ -1446,7 +1457,8 @@ window.US_GURUDWARAS = [
     "city": "Basking Ridge",
     "state": "New Jersey",
     "url": "https://gurdwaras.com/gurdwara/garden-state-sikh-association-gurudwara-3ac30dd2",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/3ac30dd2-4074-4434-9213-64254f6471c8/09c4a35de87d2455.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/3ac30dd2-4074-4434-9213-64254f6471c8/09c4a35de87d2455.jpg",
+    "websiteUrl": "https://sites.google.com/view/gssabw/home"
   },
   {
     "id": "directory-4091cd36",
@@ -1542,7 +1554,8 @@ window.US_GURUDWARAS = [
     "city": "Albuquerque",
     "state": "New Mexico",
     "url": "https://gurdwaras.com/gurdwara/albuquerque-sikh-gurudwara-927f5060",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/927f5060-15f7-4e9d-a2d4-15457f99f065/22430ddf1f301253.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/927f5060-15f7-4e9d-a2d4-15457f99f065/22430ddf1f301253.jpg",
+    "websiteUrl": "https://www.abqsg.org/"
   },
   {
     "id": "directory-2887a055",
@@ -1915,7 +1928,8 @@ window.US_GURUDWARAS = [
     "city": "Oklahoma City",
     "state": "Oklahoma",
     "url": "https://gurdwaras.com/gurdwara/sikh-gurdwara-of-oklahoma-b5cd6c30",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/b5cd6c30-7a64-4589-986d-837738264afe/b92ef33f7e1f3ad1.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/b5cd6c30-7a64-4589-986d-837738264afe/b92ef33f7e1f3ad1.jpg",
+    "websiteUrl": "http://okcgurdwara.com/"
   },
   {
     "id": "directory-a44dee3d",
@@ -2196,7 +2210,8 @@ window.US_GURUDWARAS = [
     "city": "San Antonio",
     "state": "Texas",
     "url": "https://gurdwaras.com/gurdwara/sikh-center-of-san-antonio-de0ba9d9",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/de0ba9d9-ee8b-4353-b865-3f07a0b1fd7c/5301f6085c40145f.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/de0ba9d9-ee8b-4353-b865-3f07a0b1fd7c/5301f6085c40145f.jpg",
+    "websiteUrl": "http://www.sikhcenter.us/"
   },
   {
     "id": "directory-dfe4dee8",
@@ -2485,7 +2500,8 @@ window.US_GURUDWARAS = [
     "city": "Menasha",
     "state": "Wisconsin",
     "url": "https://gurdwaras.com/gurdwara/sikh-temple-of-fox-valley-1da3a8b1",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/1da3a8b1-0ceb-4841-b9d8-13f7a11ff970/d967986ad302652f.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/1da3a8b1-0ceb-4841-b9d8-13f7a11ff970/d967986ad302652f.jpg",
+    "websiteUrl": "http://sikhtempleoffoxvalley.org/"
   },
   {
     "id": "directory-3da0454d",
