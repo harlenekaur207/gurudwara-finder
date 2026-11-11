@@ -23,23 +23,49 @@ function profilePhoto(html) {
   return /supabase\.co\/storage\/v1\/object\/public\/photos\/gurdwaras\//i.test(url) ? url : "";
 }
 
-async function addProfilePhotos(items) {
+function profileWebsite(html) {
+  const patterns = [
+    /"(?:website|websiteUrl|officialWebsite)":"(https?:[^"\\]+(?:\\.[^"\\]*)*)"/i,
+    /href="(https?:\/\/[^"#]+)"[^>]*>\s*(?:Visit\s+website|Website|Official\s+website)/i,
+  ];
+  for (const pattern of patterns) {
+    const raw = html.match(pattern)?.[1];
+    if (!raw) continue;
+    const value = raw.replace(/\\\//g, "/").replace(/&amp;/g, "&");
+    try {
+      const url = new URL(value);
+      if (!["http:", "https:"].includes(url.protocol)) continue;
+      if (/gurdwaras\.com|worldgurudwaras|newhopebelleville|akalisingh-sikhsociety|facebook|instagram|youtube|google/i.test(url.hostname)) continue;
+      return url.href;
+    } catch {}
+  }
+  return "";
+}
+
+async function addProfileDetails(items) {
   let photoCount = 0;
+  let websiteCount = 0;
   for (let index = 0; index < items.length; index += 8) {
     const batch = items.slice(index, index + 8);
     await Promise.all(batch.map(async record => {
       try {
-        const photoUrl = profilePhoto(await fetchText(record.url));
+        const html = await fetchText(record.url);
+        const photoUrl = profilePhoto(html);
+        const websiteUrl = profileWebsite(html);
         if (photoUrl) {
           record.photoUrl = photoUrl;
           photoCount += 1;
+        }
+        if (websiteUrl) {
+          record.websiteUrl = websiteUrl;
+          websiteCount += 1;
         }
       } catch (error) {
         console.warn(`Photo unavailable for ${record.name}: ${error.message}`);
       }
     }));
   }
-  return photoCount;
+  return { photoCount, websiteCount };
 }
 
 const rootHtml = await fetchText(ROOT);
@@ -67,7 +93,7 @@ for (let index = 0; index < provinceSlugs.length; index += 4) {
 }
 
 records.sort((a, b) => a.state.localeCompare(b.state) || a.city.localeCompare(b.city) || a.name.localeCompare(b.name));
-const photoCount = await addProfilePhotos(records);
+const { photoCount, websiteCount } = await addProfileDetails(records);
 const output = `// Generated from the public Gurdwaras.com Canadian directory.\nwindow.CANADA_GURUDWARAS = ${JSON.stringify(records, null, 2)};\n`;
 await writeFile(resolve(here, "..", "canada-directory.js"), output, "utf8");
-console.log(`Wrote ${records.length} Gurudwaras with ${photoCount} photos across ${new Set(records.map(record => record.state)).size} provinces.`);
+console.log(`Wrote ${records.length} Gurudwaras with ${photoCount} photos and ${websiteCount} official websites across ${new Set(records.map(record => record.state)).size} provinces.`);
