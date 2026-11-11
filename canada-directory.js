@@ -52,7 +52,8 @@ window.CANADA_GURUDWARAS = [
     "state": "Alberta",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/sikh-society-of-calgary-81c7c415",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/81c7c415-9ff0-429e-968b-232b1a168bfe/8ce29a519b9bd078.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/81c7c415-9ff0-429e-968b-232b1a168bfe/8ce29a519b9bd078.jpg",
+    "websiteUrl": "https://www.sikhsocietyofcalgary.org/"
   },
   {
     "id": "canada-d3fe834f",
@@ -70,7 +71,8 @@ window.CANADA_GURUDWARAS = [
     "state": "Alberta",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-millwoods-f1523db1",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/f1523db1-a206-4613-8f3a-792dc1b8550b/21a5a601e6f6ede6.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/f1523db1-a206-4613-8f3a-792dc1b8550b/21a5a601e6f6ede6.jpg",
+    "websiteUrl": "https://www.gurdwaramillwoods.com/"
   },
   {
     "id": "canada-db3ae025",
@@ -88,7 +90,8 @@ window.CANADA_GURUDWARAS = [
     "state": "Alberta",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/nanaksar-gurudwara-gursikh-temple-5b02af5a",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/5b02af5a-605b-4389-a2bc-2471c418d70b/21f636a39eab2e67.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/5b02af5a-605b-4389-a2bc-2471c418d70b/21f636a39eab2e67.jpg",
+    "websiteUrl": "https://www.nanaksargurdwara.ca/"
   },
   {
     "id": "canada-16f974f7",
@@ -159,7 +162,8 @@ window.CANADA_GURUDWARAS = [
     "state": "British Columbia",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gur-sikh-temple-089e7d3a",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/089e7d3a-33b9-4bfd-b665-ca3b44706102/66cfed24b679e129.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/089e7d3a-33b9-4bfd-b665-ca3b44706102/66cfed24b679e129.jpg",
+    "websiteUrl": "http://canadiansikhheritage.ca/"
   },
   {
     "id": "canada-83a16b40",
@@ -167,7 +171,8 @@ window.CANADA_GURUDWARAS = [
     "city": "Abbotsford",
     "state": "British Columbia",
     "country": "Canada",
-    "url": "https://gurdwaras.com/gurdwara/gurdwara-baba-banda-singh-bahadar-sikh-society-83a16b40"
+    "url": "https://gurdwaras.com/gurdwara/gurdwara-baba-banda-singh-bahadar-sikh-society-83a16b40",
+    "websiteUrl": "http://www.gbsbs.org/"
   },
   {
     "id": "canada-ceb8bcc4",
@@ -176,7 +181,8 @@ window.CANADA_GURUDWARAS = [
     "state": "British Columbia",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-baba-banda-singh-bahadar-sikh-society-ceb8bcc4",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/ceb8bcc4-8181-48a0-8dd6-87a1df94d3b8/a048d72135cb30a1.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/ceb8bcc4-8181-48a0-8dd6-87a1df94d3b8/a048d72135cb30a1.jpg",
+    "websiteUrl": "http://www.gbsbs.org/"
   },
   {
     "id": "canada-2ebe0444",
@@ -185,7 +191,8 @@ window.CANADA_GURUDWARAS = [
     "state": "British Columbia",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-sahib-kalgidhar-darbar-2ebe0444",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/2ebe0444-e796-4fb7-90ef-335f285e61df/5e1683fe0aa43bf2.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/2ebe0444-e796-4fb7-90ef-335f285e61df/5e1683fe0aa43bf2.jpg",
+    "websiteUrl": "http://kalgidhardarbar.net/"
   },
   {
     "id": "canada-b0bcd343",
@@ -212,7 +219,8 @@ window.CANADA_GURUDWARAS = [
     "state": "British Columbia",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/shri-guru-ravidass-sabha-vancouver-e334d1b4",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/e334d1b4-2ae6-4bd9-b220-7ddf539dec6f/da319ba2fccfdb8c.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/e334d1b4-2ae6-4bd9-b220-7ddf539dec6f/da319ba2fccfdb8c.jpg",
+    "websiteUrl": "http://www.gururavidasssabha.org/"
   },
   {
     "id": "canada-7a3a4e3a",
@@ -461,7 +469,8 @@ window.CANADA_GURUDWARAS = [
     "state": "British Columbia",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/india-cultural-centre-of-canada-23182f0f",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/23182f0f-b94f-4149-8322-e6afe08a43fc/97ff276a7ba40a98.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/23182f0f-b94f-4149-8322-e6afe08a43fc/97ff276a7ba40a98.jpg",
+    "websiteUrl": "https://nanakniwas.com/"
   },
   {
     "id": "canada-dcf87920",
@@ -488,7 +497,8 @@ window.CANADA_GURUDWARAS = [
     "state": "British Columbia",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/darbar-sri-guru-granth-sahib-ji-971dcb41",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/971dcb41-af92-4625-9c8e-46611618644e/ca883a5caa565dd8.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/971dcb41-af92-4625-9c8e-46611618644e/ca883a5caa565dd8.jpg",
+    "websiteUrl": "https://www.darbarsrigurugranthsahibji.com/locations.html"
   },
   {
     "id": "canada-f511540a",
@@ -506,7 +516,8 @@ window.CANADA_GURUDWARAS = [
     "state": "British Columbia",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-dukh-nivaran-sahib-794c5612",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/794c5612-7faf-4ce9-b93c-3925a9201ea8/b45714d7e48ae9cd.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/794c5612-7faf-4ce9-b93c-3925a9201ea8/b45714d7e48ae9cd.jpg",
+    "websiteUrl": "https://dukhnivaran.ca/"
   },
   {
     "id": "canada-3d2760aa",
@@ -515,7 +526,8 @@ window.CANADA_GURUDWARAS = [
     "state": "British Columbia",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-dukh-nivaran-sahib-3d2760aa",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/3d2760aa-b6fd-4554-bf8b-12d29c71cee5/a1b303beaf9da0dc.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/3d2760aa-b6fd-4554-bf8b-12d29c71cee5/a1b303beaf9da0dc.jpg",
+    "websiteUrl": "https://dukhnivaran.ca/"
   },
   {
     "id": "canada-38b44298",
@@ -524,7 +536,8 @@ window.CANADA_GURUDWARAS = [
     "state": "British Columbia",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-nanaksar-surrey-38b44298",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/38b44298-da90-4c1e-8567-8853057aaade/9717c6378e7756a4.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/38b44298-da90-4c1e-8567-8853057aaade/9717c6378e7756a4.jpg",
+    "websiteUrl": "http://www.gurdwarananaksar.com/"
   },
   {
     "id": "canada-801a4189",
@@ -542,7 +555,8 @@ window.CANADA_GURUDWARAS = [
     "state": "British Columbia",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-sahib-brookside-ecae61fe",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/ecae61fe-e4bf-4246-a077-846aec81379f/f9b156d49abd94f6.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/ecae61fe-e4bf-4246-a077-846aec81379f/f9b156d49abd94f6.jpg",
+    "websiteUrl": "http://ramgarhiabc.com/"
   },
   {
     "id": "canada-54380ec5",
@@ -551,7 +565,8 @@ window.CANADA_GURUDWARAS = [
     "state": "British Columbia",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-sahib-dasmesh-darbar-54380ec5",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/54380ec5-3491-4acd-9ea3-886b30427032/a5f108322beda905.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/54380ec5-3491-4acd-9ea3-886b30427032/a5f108322beda905.jpg",
+    "websiteUrl": "https://dasmeshdarbar.ca/"
   },
   {
     "id": "canada-4af4a505",
@@ -569,7 +584,8 @@ window.CANADA_GURUDWARAS = [
     "state": "British Columbia",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/guru-nanak-sikh-gurdwara-05be511c",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/05be511c-f753-463a-9b09-0531d0102b9c/ea31f6311f2e18d8.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/05be511c-f753-463a-9b09-0531d0102b9c/ea31f6311f2e18d8.jpg",
+    "websiteUrl": "http://gnsg.org/"
   },
   {
     "id": "canada-c173cf58",
@@ -596,7 +612,8 @@ window.CANADA_GURUDWARAS = [
     "state": "British Columbia",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/sri-guru-singh-sabha-surrey-f6113f3f",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/f6113f3f-f176-4cbd-98eb-ab9774d3cc15/1eb58ad3708161be.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/f6113f3f-f176-4cbd-98eb-ab9774d3cc15/1eb58ad3708161be.jpg",
+    "websiteUrl": "https://singhsabhasurrey.com/"
   },
   {
     "id": "canada-3a7b38a0",
@@ -650,7 +667,8 @@ window.CANADA_GURUDWARAS = [
     "state": "British Columbia",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/khalsa-darbar-society-e4286f09",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/e4286f09-e784-4c6a-a013-59b29c744ec3/ba108d73d2f88ca3.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/e4286f09-e784-4c6a-a013-59b29c744ec3/ba108d73d2f88ca3.jpg",
+    "websiteUrl": "http://khalsadarbar.com/"
   },
   {
     "id": "canada-86624e59",
@@ -659,7 +677,8 @@ window.CANADA_GURUDWARAS = [
     "state": "British Columbia",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/khalsa-diwan-society-gurdwara-86624e59",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/86624e59-3987-4962-86a7-b6c80ca4c2bc/398df4b621947273.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/86624e59-3987-4962-86a7-b6c80ca4c2bc/398df4b621947273.jpg",
+    "websiteUrl": "https://kdsross.com/"
   },
   {
     "id": "canada-5991d24c",
@@ -668,7 +687,8 @@ window.CANADA_GURUDWARAS = [
     "state": "British Columbia",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/satguru-ram-singh-satsang-5991d24c",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/5991d24c-9c2e-4c88-9697-f7c4f9690be4/cb4b8b279eb37f75.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/5991d24c-9c2e-4c88-9697-f7c4f9690be4/cb4b8b279eb37f75.jpg",
+    "websiteUrl": "https://srssglobal.org/vancouver-canada/"
   },
   {
     "id": "canada-ef8cdd4a",
@@ -721,7 +741,8 @@ window.CANADA_GURUDWARAS = [
     "state": "British Columbia",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-western-singh-sabha-association-17595d0a",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/17595d0a-ade7-4a1d-8afd-03946cc35340/c27dd17b61838663.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/17595d0a-ade7-4a1d-8afd-03946cc35340/c27dd17b61838663.jpg",
+    "websiteUrl": "https://singhsaba.com/"
   },
   {
     "id": "canada-7b07a2d4",
@@ -882,7 +903,8 @@ window.CANADA_GURUDWARAS = [
     "state": "Ontario",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-dasmesh-darbar-sikh-temple-9b9a0ad4",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/9b9a0ad4-3d97-443d-9267-41f371d5871e/0f3bce66c0fd3ff0.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/9b9a0ad4-3d97-443d-9267-41f371d5871e/0f3bce66c0fd3ff0.jpg",
+    "websiteUrl": "https://www.gurdwaradasmeshdarbar.com/"
   },
   {
     "id": "canada-9d8f3e5a",
@@ -909,7 +931,8 @@ window.CANADA_GURUDWARAS = [
     "state": "Ontario",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-nanaksar-brampton-0947ca5d",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/0947ca5d-02eb-495d-a437-79033d31d59b/7538663c9a4d097b.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/0947ca5d-02eb-495d-a437-79033d31d59b/7538663c9a4d097b.jpg",
+    "websiteUrl": "http://www.gurdwarananaksar.com/"
   },
   {
     "id": "canada-db7b2657",
@@ -1033,7 +1056,8 @@ window.CANADA_GURUDWARAS = [
     "state": "Ontario",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/siri-guru-singh-sabha-0b2372b1",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/0b2372b1-ba8d-4ce7-a77e-9f0b9b21d04f/43773de5e30a2ba8.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/0b2372b1-ba8d-4ce7-a77e-9f0b9b21d04f/43773de5e30a2ba8.jpg",
+    "websiteUrl": "https://cambridgegurdwara.ca/"
   },
   {
     "id": "canada-830252ba",
@@ -1086,7 +1110,8 @@ window.CANADA_GURUDWARAS = [
     "state": "Ontario",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/guelph-sikh-society-cccba6b3",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/cccba6b3-88c0-4a6f-9a9e-ef99bc2ad79b/c2fcb538df3d2f13.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/cccba6b3-88c0-4a6f-9a9e-ef99bc2ad79b/c2fcb538df3d2f13.jpg",
+    "websiteUrl": "https://guelphsikhsociety.ca/"
   },
   {
     "id": "canada-5b49bbaf",
@@ -1284,7 +1309,8 @@ window.CANADA_GURUDWARAS = [
     "state": "Ontario",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gursikh-sabha-canada-afeccaaa",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/afeccaaa-fe5d-4197-a791-cdefd2e33d42/a652509196aa9fae.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/afeccaaa-fe5d-4197-a791-cdefd2e33d42/a652509196aa9fae.jpg",
+    "websiteUrl": "http://www.gursikhsabha.ca/"
   },
   {
     "id": "canada-577971fe",
@@ -1373,7 +1399,8 @@ window.CANADA_GURUDWARAS = [
     "state": "Quebec",
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-guru-nanak-darbar-d67f9a10",
-    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/d67f9a10-5172-4cca-a59f-e0afa6b33be0/5f4835953522873d.jpg"
+    "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/d67f9a10-5172-4cca-a59f-e0afa6b33be0/5f4835953522873d.jpg",
+    "websiteUrl": "https://montrealgurudwara.com/"
   },
   {
     "id": "canada-38e98d64",
