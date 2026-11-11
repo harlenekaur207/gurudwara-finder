@@ -1,3 +1,14 @@
+const OFFICIAL_WEBSITES = {
+  "southall": "https://www.sgsss.org/",
+  "fremont": "https://www.fremontgurdwara.org/",
+  "san-jose": "https://www.sanjosegurdwara.org/",
+  "surrey": "https://dasmeshdarbar.ca/",
+  "auckland": "https://www.supremesikhsociety.co.nz/",
+  "gnfa-maryland": "https://gnfa.org/",
+  "ggsf-maryland": "https://ggsfusa.org/",
+  "wsc-maryland": "https://washingtonsikhcenter.org/"
+};
+
 window.GURUDWARAS = [
   ["harmandir-sahib","Sri Harmandir Sahib","Golden Temple","Golden Temple Road, Amritsar, Punjab 143006, India","Amritsar","India","+91 183 255 3957","Open 24 hours",31.62,74.8765,"A place of worship and welcome in the heart of Amritsar, with langar served to visitors from every background.","Sri Harmandir Sahib live","Asa di Vaar","Daily","Early morning"],
   ["bangla-sahib","Gurudwara Bangla Sahib","Bangla Sahib","Ashoka Road, Connaught Place, New Delhi 110001, India","New Delhi","India","+91 11 2334 0177","Open 24 hours",28.6264,77.2091,"A historic Gurudwara known for its sarovar, community kitchen, and central location in New Delhi.","Gurudwara Bangla Sahib live","Evening Kirtan","Daily","6:00 PM"],
@@ -15,4 +26,4 @@ window.GURUDWARAS = [
   ["ggsf-maryland","Guru Gobind Singh Foundation","GGSF Rockville","13814 Travilah Road, Rockville, MD 20850","Rockville, Maryland","United States","+1 301 838 3004","Hours vary by program",39.087,-77.254,"A Sikh spiritual and community centre in Rockville offering diwans, langar, youth learning, and seva programs.","Guru Gobind Singh Foundation Maryland live","Friday Diwan","Every Friday","7:00 PM"],
   ["wsc-maryland","Gurdwara Washington Sikh Center","Washington Sikh Center","7500 Warfield Road, Gaithersburg, MD 20882","Gaithersburg, Maryland","United States","+1 240 350 1110","Sunday programs",39.205,-77.168,"A Gaithersburg Gurudwara offering kirtan, katha, Punjabi and Gurmat classes, and free community langar.","Washington Sikh Center Maryland live","Sunday Diwan and Langar","Every Sunday","11:45 AM"],
   ["sab-maryland","Sikh Association of Baltimore","Baltimore Sikh Association","3423 Chapman Road, Randallstown, MD 21133","Randallstown, Maryland","United States","+1 410 521 7568","Hours not listed",39.375,-76.78,"A Sikh Gurudwara serving Baltimore-area families through worship, langar, education, and community activities.","Sikh Association of Baltimore live","Community Diwan","Check with Gurudwara","Schedule varies"]
-].map(([id,name,shortName,address,city,country,phone,hours,lat,lng,description,broadcast,title,date,time]) => ({id,name,shortName,address,city,country,phone,hours,lat,lng,description,broadcastUrl:broadcast?`https://www.youtube.com/results?search_query=${encodeURIComponent(broadcast)}`:"",events:[{title,date,time}]}));
+].map(([id,name,shortName,address,city,country,phone,hours,lat,lng,description,broadcast,title,date,time]) => ({id,name,shortName,address,city,country,phone,hours,lat,lng,description,websiteUrl:OFFICIAL_WEBSITES[id]||"",broadcastUrl:broadcast?`https://www.youtube.com/results?search_query=${encodeURIComponent(broadcast)}`:"",events:[{title,date,time}]}));
