@@ -72,7 +72,9 @@ window.CANADA_GURUDWARAS = [
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-millwoods-f1523db1",
     "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/f1523db1-a206-4613-8f3a-792dc1b8550b/21a5a601e6f6ede6.jpg",
-    "websiteUrl": "https://www.gurdwaramillwoods.com/"
+    "websiteUrl": "https://www.gurdwaramillwoods.com/",
+    "broadcastUrl": "https://www.youtube.com/@gurdwaramillwoods/live",
+    "broadcastPlatform": "YouTube"
   },
   {
     "id": "canada-db3ae025",
@@ -517,7 +519,9 @@ window.CANADA_GURUDWARAS = [
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-dukh-nivaran-sahib-794c5612",
     "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/794c5612-7faf-4ce9-b93c-3925a9201ea8/b45714d7e48ae9cd.jpg",
-    "websiteUrl": "https://dukhnivaran.ca/"
+    "websiteUrl": "https://dukhnivaran.ca/",
+    "broadcastUrl": "https://dukhnivaran.ca/live/",
+    "broadcastPlatform": "Official live stream"
   },
   {
     "id": "canada-3d2760aa",
@@ -527,7 +531,9 @@ window.CANADA_GURUDWARAS = [
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-dukh-nivaran-sahib-3d2760aa",
     "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/3d2760aa-b6fd-4554-bf8b-12d29c71cee5/a1b303beaf9da0dc.jpg",
-    "websiteUrl": "https://dukhnivaran.ca/"
+    "websiteUrl": "https://dukhnivaran.ca/",
+    "broadcastUrl": "https://dukhnivaran.ca/live/",
+    "broadcastPlatform": "Official live stream"
   },
   {
     "id": "canada-38b44298",
@@ -566,7 +572,9 @@ window.CANADA_GURUDWARAS = [
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-sahib-dasmesh-darbar-54380ec5",
     "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/54380ec5-3491-4acd-9ea3-886b30427032/a5f108322beda905.jpg",
-    "websiteUrl": "https://dasmeshdarbar.ca/"
+    "websiteUrl": "https://dasmeshdarbar.ca/",
+    "broadcastUrl": "https://www.facebook.com/GSDDSURREY/live_videos/",
+    "broadcastPlatform": "Facebook Live"
   },
   {
     "id": "canada-4af4a505",
@@ -585,7 +593,9 @@ window.CANADA_GURUDWARAS = [
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/guru-nanak-sikh-gurdwara-05be511c",
     "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/05be511c-f753-463a-9b09-0531d0102b9c/ea31f6311f2e18d8.jpg",
-    "websiteUrl": "http://gnsg.org/"
+    "websiteUrl": "http://gnsg.org/",
+    "broadcastUrl": "http://gnsg.org/live-streaming/",
+    "broadcastPlatform": "Official live stream"
   },
   {
     "id": "canada-c173cf58",
@@ -613,7 +623,9 @@ window.CANADA_GURUDWARAS = [
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/sri-guru-singh-sabha-surrey-f6113f3f",
     "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/f6113f3f-f176-4cbd-98eb-ab9774d3cc15/1eb58ad3708161be.jpg",
-    "websiteUrl": "https://singhsabhasurrey.com/"
+    "websiteUrl": "https://singhsabhasurrey.com/",
+    "broadcastUrl": "https://singhsabhasurrey.com/live-stream/",
+    "broadcastPlatform": "Official live stream"
   },
   {
     "id": "canada-3a7b38a0",
@@ -668,7 +680,9 @@ window.CANADA_GURUDWARAS = [
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/khalsa-darbar-society-e4286f09",
     "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/e4286f09-e784-4c6a-a013-59b29c744ec3/ba108d73d2f88ca3.jpg",
-    "websiteUrl": "http://khalsadarbar.com/"
+    "websiteUrl": "http://khalsadarbar.com/",
+    "broadcastUrl": "https://www.khalsadarbar.com/live-broadcast/",
+    "broadcastPlatform": "Official live stream"
   },
   {
     "id": "canada-86624e59",
@@ -742,7 +756,9 @@ window.CANADA_GURUDWARAS = [
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-western-singh-sabha-association-17595d0a",
     "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/17595d0a-ade7-4a1d-8afd-03946cc35340/c27dd17b61838663.jpg",
-    "websiteUrl": "https://singhsaba.com/"
+    "websiteUrl": "https://singhsaba.com/",
+    "broadcastUrl": "https://singhsaba.com/live-video/",
+    "broadcastPlatform": "Official live stream"
   },
   {
     "id": "canada-7b07a2d4",
@@ -904,7 +920,9 @@ window.CANADA_GURUDWARAS = [
     "country": "Canada",
     "url": "https://gurdwaras.com/gurdwara/gurdwara-dasmesh-darbar-sikh-temple-9b9a0ad4",
     "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/9b9a0ad4-3d97-443d-9267-41f371d5871e/0f3bce66c0fd3ff0.jpg",
-    "websiteUrl": "https://www.gurdwaradasmeshdarbar.com/"
+    "websiteUrl": "https://www.gurdwaradasmeshdarbar.com/",
+    "broadcastUrl": "https://gurdwaradasmeshdarbar.com/telecast/",
+    "broadcastPlatform": "Official live stream"
   },
   {
     "id": "canada-9d8f3e5a",
