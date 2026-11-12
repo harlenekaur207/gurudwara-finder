@@ -693,7 +693,9 @@ window.US_GURUDWARAS = [
     "state": "California",
     "url": "https://gurdwaras.com/gurdwara/sikh-temple-sacramento-ecbe1b5b",
     "photoUrl": "https://avlhvuafoitmtbkasjks.supabase.co/storage/v1/object/public/photos/gurdwaras/ecbe1b5b-9cec-4745-abf7-38cce22d763f/ba48c41decd5ea9d.jpg",
-    "websiteUrl": "https://sikhtemple.org/"
+    "websiteUrl": "https://sikhtemple.org/",
+    "broadcastUrl": "https://sikhtemple.org/live-2/",
+    "broadcastPlatform": "Official live stream"
   },
   {
     "id": "directory-c68ba6da",
