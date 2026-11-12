@@ -9,6 +9,22 @@ const OFFICIAL_WEBSITES = {
   "wsc-maryland": "https://washingtonsikhcenter.org/"
 };
 
+const VERIFIED_BROADCASTS = {
+  "harmandir-sahib": {url: "https://sgpc.net/live-kirtan-sri-harmandir-sahib-128-kbps/", platform: "SGPC live audio"},
+  "bangla-sahib": {url: "https://dsgmc.in/SangatServices/LiveKirtanGurdwaraBanglaSahib", platform: "DSGMC live audio"},
+  "southall": {url: "https://www.youtube.com/@SgssSouthall_live/live", platform: "YouTube"},
+  "fremont": {url: "https://play.sikhnet.com/radio/gurdwara-sahib-fremont", platform: "SikhNet live audio"},
+  "san-jose": {url: "https://play.sikhnet.com/radio/gurdwara-san-jose", platform: "SikhNet live audio"},
+  "surrey": {url: "https://www.facebook.com/GSDDSURREY/live_videos/", platform: "Facebook Live"},
+  "parklea": {url: "https://play.sikhnet.com/radio/gurdwara-sahib-glenwood", platform: "SikhNet live audio"},
+  "singapore": {url: "https://www.facebook.com/centralsikhgurdwaraboard/live", platform: "Facebook Live"},
+  "dubai": {url: "https://www.youtube.com/channel/UCgccPfEjKWo8ugh7XVY8zDg/live", platform: "YouTube"},
+  "auckland": {url: "https://www.facebook.com/TakaniniGurdwara/live", platform: "Facebook Live"},
+  "gnfa-maryland": {url: "https://www.facebook.com/gnfagurudwara/live", platform: "Facebook Live"},
+  "ggsf-maryland": {url: "https://www.youtube.com/channel/UCctp25ZTW39crJtRQn-s2rg/live", platform: "YouTube"},
+  "wsc-maryland": {url: "https://www.youtube.com/channel/UCTTCudxSiok_R8gCAN1VbBw/live", platform: "YouTube"}
+};
+
 window.GURUDWARAS = [
   ["harmandir-sahib","Sri Harmandir Sahib","Golden Temple","Golden Temple Road, Amritsar, Punjab 143006, India","Amritsar","India","+91 183 255 3957","Open 24 hours",31.62,74.8765,"A place of worship and welcome in the heart of Amritsar, with langar served to visitors from every background.","Sri Harmandir Sahib live","Asa di Vaar","Daily","Early morning"],
   ["bangla-sahib","Gurudwara Bangla Sahib","Bangla Sahib","Ashoka Road, Connaught Place, New Delhi 110001, India","New Delhi","India","+91 11 2334 0177","Open 24 hours",28.6264,77.2091,"A historic Gurudwara known for its sarovar, community kitchen, and central location in New Delhi.","Gurudwara Bangla Sahib live","Evening Kirtan","Daily","6:00 PM"],
@@ -26,4 +42,4 @@ window.GURUDWARAS = [
   ["ggsf-maryland","Guru Gobind Singh Foundation","GGSF Rockville","13814 Travilah Road, Rockville, MD 20850","Rockville, Maryland","United States","+1 301 838 3004","Hours vary by program",39.087,-77.254,"A Sikh spiritual and community centre in Rockville offering diwans, langar, youth learning, and seva programs.","Guru Gobind Singh Foundation Maryland live","Friday Diwan","Every Friday","7:00 PM"],
   ["wsc-maryland","Gurdwara Washington Sikh Center","Washington Sikh Center","7500 Warfield Road, Gaithersburg, MD 20882","Gaithersburg, Maryland","United States","+1 240 350 1110","Sunday programs",39.205,-77.168,"A Gaithersburg Gurudwara offering kirtan, katha, Punjabi and Gurmat classes, and free community langar.","Washington Sikh Center Maryland live","Sunday Diwan and Langar","Every Sunday","11:45 AM"],
   ["sab-maryland","Sikh Association of Baltimore","Baltimore Sikh Association","3423 Chapman Road, Randallstown, MD 21133","Randallstown, Maryland","United States","+1 410 521 7568","Hours not listed",39.375,-76.78,"A Sikh Gurudwara serving Baltimore-area families through worship, langar, education, and community activities.","Sikh Association of Baltimore live","Community Diwan","Check with Gurudwara","Schedule varies"]
-].map(([id,name,shortName,address,city,country,phone,hours,lat,lng,description,broadcast,title,date,time]) => ({id,name,shortName,address,city,country,phone,hours,lat,lng,description,websiteUrl:OFFICIAL_WEBSITES[id]||"",broadcastUrl:broadcast?`https://www.youtube.com/results?search_query=${encodeURIComponent(broadcast)}`:"",events:[{title,date,time}]}));
+].map(([id,name,shortName,address,city,country,phone,hours,lat,lng,description,_broadcast,title,date,time]) => ({id,name,shortName,address,city,country,phone,hours,lat,lng,description,websiteUrl:OFFICIAL_WEBSITES[id]||"",broadcastUrl:VERIFIED_BROADCASTS[id]?.url||"",broadcastPlatform:VERIFIED_BROADCASTS[id]?.platform||"",events:[{title,date,time}]}));
