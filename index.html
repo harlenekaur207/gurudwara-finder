@@ -6,7 +6,7 @@
   <title>Sangat — Gurudwara Finder</title>
   <link rel="preconnect" href="https://unpkg.com"><link rel="preconnect" href="https://tile.openstreetmap.org">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-  <link rel="stylesheet" href="styles.css?v=11">
+  <link rel="stylesheet" href="styles.css?v=12">
 </head>
 <body>
   <header class="site-header">
@@ -65,6 +65,10 @@
             <label class="reminder-row"><span><strong>Rehras Sahib</strong><small>Evening</small></span><input type="time" data-reminder-time="rehras"><input class="switch-input" type="checkbox" data-reminder-toggle="rehras" aria-label="Enable Rehras Sahib reminder"></label>
             <label class="reminder-row"><span><strong>Kirtan Sohila</strong><small>Before rest</small></span><input type="time" data-reminder-time="sohila"><input class="switch-input" type="checkbox" data-reminder-toggle="sohila" aria-label="Enable Kirtan Sohila reminder"></label>
           </div>
+          <div class="chime-settings" aria-label="Alarm sound settings">
+            <label class="chime-control"><span><strong>Alarm sound</strong><small>Choose what you hear at Paath time</small></span><select id="chime-style"><option value="waheguru">Waheguru voice + chime</option><option value="temple">Bright temple chime</option><option value="gentle">Gentle bell</option></select></label>
+            <label class="chime-control volume-control"><span><strong>Chime volume</strong><small id="chime-volume-value">90%</small></span><input id="chime-volume" type="range" min="10" max="100" step="5" value="90" aria-label="Chime volume"></label>
+          </div>
           <div class="reminder-actions"><button class="primary-button" id="enable-reminders">Enable alarm notifications</button><button class="quiet-button" id="test-chime">Test chime</button></div>
           <p class="reminder-status" id="reminder-status" aria-live="polite">Alarms work while this page is open. Browser notifications can appear in the background when permitted.</p>
         </article>
@@ -101,6 +105,6 @@
   </dialog>
   <dialog id="paath-reader" class="dialog-shell paath-reader"><button class="close-button" data-close="paath-reader" aria-label="Close">×</button><p class="eyebrow" id="reader-time">Daily Paath</p><h2 id="reader-title">Japji Sahib</h2><p class="reader-note">Guided opening selection</p><div class="reader-toolbar"><label>Reading language<select id="reader-language"><option value="punjabi">Punjabi · Gurmukhi</option><option value="hindi">Hindi · Devanagari</option><option value="roman">English Punjabi · Roman</option></select></label><div class="reader-controls"><button class="primary-button" id="play-paath">▶ Play &amp; follow</button><button class="quiet-button" id="stop-paath">Stop</button></div></div><div class="paath-text" id="paath-text" tabindex="0"></div><p class="reader-disclaimer">Audio uses a voice available on this device and may not reproduce traditional pronunciation perfectly.</p></dialog>
   <dialog id="paath-alert" class="dialog-shell paath-alert"><div class="alarm-icon">ੴ</div><p class="eyebrow">Paath reminder</p><h2 id="alert-title">It is time for Paath</h2><p id="alert-copy">Take a quiet moment for your daily practice.</p><div class="alert-actions"><button class="primary-button" id="alert-listen">▶ Listen</button><button class="outline-button" id="alert-read">Read</button><button class="quiet-button" id="dismiss-alert">Not now</button></div></dialog>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><script src="data.js?v=8"></script><script src="us-directory.js?v=6"></script><script src="canada-directory.js?v=6"></script><script src="app.js?v=10"></script><script src="paath.js?v=1"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><script src="data.js?v=8"></script><script src="us-directory.js?v=6"></script><script src="canada-directory.js?v=6"></script><script src="app.js?v=10"></script><script src="paath.js?v=2"></script>
 </body>
 </html>
