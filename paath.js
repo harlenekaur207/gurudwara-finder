@@ -12,6 +12,8 @@
   let reminders = {...defaults, ...JSON.parse(localStorage.getItem("sangat-paath-reminders") || "{}")};
   let chimeSettings = {style:"waheguru", volume:90, ...JSON.parse(localStorage.getItem("sangat-chime-settings") || "{}")};
   let currentPaath = "japji", currentLanguage = "punjabi", currentVerses = [], wordTimer = null, activeAlertPaath = "japji", hukamData = null;
+  let chimeLoop = null, testChimeActive = false;
+  const activeAudioContexts = new Set(), pendingChimeTimeouts = new Set();
 
   function saveReminders() {
     localStorage.setItem("sangat-paath-reminders", JSON.stringify(reminders));
@@ -43,7 +45,7 @@
     localStorage.setItem("sangat-chime-settings", JSON.stringify(chimeSettings));
     el("chime-volume-value").textContent = `${chimeSettings.volume}%`;
     const label = {waheguru:"Waheguru chime", temple:"temple chime", gentle:"gentle bell"}[chimeSettings.style];
-    el("test-chime").textContent = `Test ${label}`;
+    el("test-chime").textContent = testChimeActive ? "Stop test chime" : `Test ${label}`;
   }
   function hydrateChimeSettings() {
     chimeSettings.volume = Math.max(10, Math.min(100, Number(chimeSettings.volume) || 90));
@@ -52,19 +54,23 @@
     el("chime-style").addEventListener("change", event => { chimeSettings.style = event.target.value; saveChimeSettings(); });
     el("chime-volume").addEventListener("input", event => { chimeSettings.volume = Number(event.target.value); saveChimeSettings(); });
   }
+  function queueChimeTask(task, delay) {
+    const timeout = setTimeout(() => { pendingChimeTimeouts.delete(timeout); task(); }, delay);
+    pendingChimeTimeouts.add(timeout);
+  }
   function speakWaheguru() {
     if (!("speechSynthesis" in window)) return;
     speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance("Waheguru");
-    utterance.lang = "pa-IN"; utterance.rate = .72; utterance.pitch = .92; utterance.volume = chimeSettings.volume / 100;
+    const utterance = new SpeechSynthesisUtterance("Waheguru. Waheguru.");
+    utterance.lang = "pa-IN"; utterance.rate = .68; utterance.pitch = .92; utterance.volume = chimeSettings.volume / 100;
     const voices = speechSynthesis.getVoices();
     utterance.voice = voices.find(voice => voice.lang.toLowerCase().startsWith("pa")) || voices.find(voice => voice.lang.toLowerCase().startsWith("hi")) || voices.find(voice => voice.lang.toLowerCase().startsWith("en-in")) || null;
     speechSynthesis.speak(utterance);
   }
-  function playChime() {
+  function playChimeOnce() {
     const AudioContextClass = window.AudioContext || window.webkitAudioContext;
     if (!AudioContextClass) { if (chimeSettings.style === "waheguru") speakWaheguru(); return; }
-    const context = new AudioContextClass(), master = context.createGain(), volume = chimeSettings.volume / 100;
+    const context = new AudioContextClass(), master = context.createGain(), volume = chimeSettings.volume / 100; activeAudioContexts.add(context);
     master.connect(context.destination); master.gain.setValueAtTime(.0001, context.currentTime);
     const patterns = {
       waheguru: {notes:[523.25,659.25,783.99,1046.5], spacing:.16, length:1.05, wave:"triangle", level:.42},
@@ -78,8 +84,22 @@
       oscillator.connect(noteGain); noteGain.connect(master); oscillator.start(start); oscillator.stop(start + pattern.length + .05);
     });
     master.gain.exponentialRampToValueAtTime(Math.max(.025, pattern.level * volume), context.currentTime + .03); master.gain.exponentialRampToValueAtTime(.0001, context.currentTime + 2.05);
-    if (chimeSettings.style === "waheguru") setTimeout(speakWaheguru, 720);
-    setTimeout(() => context.close(), 2400);
+    if (chimeSettings.style === "waheguru") queueChimeTask(speakWaheguru, 650);
+    queueChimeTask(() => { activeAudioContexts.delete(context); if (context.state !== "closed") context.close().catch(() => {}); }, 2400);
+  }
+  function stopChime() {
+    clearInterval(chimeLoop); chimeLoop = null;
+    pendingChimeTimeouts.forEach(timeout => clearTimeout(timeout)); pendingChimeTimeouts.clear();
+    activeAudioContexts.forEach(context => { if (context.state !== "closed") context.close().catch(() => {}); }); activeAudioContexts.clear();
+    if ("speechSynthesis" in window) speechSynthesis.cancel();
+    testChimeActive = false; saveChimeSettings();
+  }
+  function startChimeLoop(forTest = false) {
+    stopChime(); testChimeActive = forTest; saveChimeSettings(); playChimeOnce();
+    chimeLoop = setInterval(playChimeOnce, 3400);
+  }
+  function toggleTestChime() {
+    if (testChimeActive) stopChime(); else startChimeLoop(true);
   }
   async function enableNotifications() {
     if (!("Notification" in window)) { el("reminder-status").textContent = "This browser does not support notifications. The on-page alarm will still work while the app is open."; return; }
@@ -87,7 +107,7 @@
     el("reminder-status").textContent = permission === "granted" ? "Alarm notifications are enabled. Keep the app open for scheduled chimes." : "Notifications were not enabled. The on-page alarm will still work while the app is open.";
   }
   function triggerReminder(id) {
-    const paath = PAATHS[id]; activeAlertPaath = id; playChime();
+    const paath = PAATHS[id]; activeAlertPaath = id; startChimeLoop();
     el("alert-title").textContent = `It is time for ${paath.name}`; el("alert-copy").textContent = `Take a quiet moment for your ${paath.timeLabel.toLowerCase()} Paath.`;
     if (!el("paath-alert").open) el("paath-alert").showModal();
     if ("Notification" in window && Notification.permission === "granted") new Notification(`Time for ${paath.name}`, {body:"Your Paath reminder from Sangat.", tag:`sangat-${id}`});
@@ -169,11 +189,12 @@
   }
 
   hydrateReminders(); hydrateChimeSettings(); loadHukam(); checkReminders(); setInterval(checkReminders, 20000);
-  el("enable-reminders").addEventListener("click", enableNotifications); el("test-chime").addEventListener("click", playChime);
+  el("enable-reminders").addEventListener("click", enableNotifications); el("test-chime").addEventListener("click", toggleTestChime);
   document.querySelectorAll("[data-open-paath]").forEach(button => button.addEventListener("click", () => openReader(button.dataset.openPaath, button.dataset.mode === "listen")));
   el("reader-language").addEventListener("change", event => { currentLanguage = event.target.value; stopSpeech(); renderReader(); }); el("play-paath").addEventListener("click", speakPaath); el("stop-paath").addEventListener("click", stopSpeech);
   document.querySelectorAll("[data-hukam-language]").forEach(button => button.addEventListener("click", () => { document.querySelectorAll("[data-hukam-language]").forEach(item => item.classList.toggle("active", item === button)); renderHukam(button.dataset.hukamLanguage); }));
-  el("dismiss-alert").addEventListener("click", () => el("paath-alert").close()); el("alert-read").addEventListener("click", () => { el("paath-alert").close(); openReader(activeAlertPaath); }); el("alert-listen").addEventListener("click", () => { el("paath-alert").close(); openReader(activeAlertPaath, true); });
+  el("dismiss-alert").addEventListener("click", () => { stopChime(); el("paath-alert").close(); }); el("alert-read").addEventListener("click", () => { stopChime(); el("paath-alert").close(); openReader(activeAlertPaath); }); el("alert-listen").addEventListener("click", () => { stopChime(); el("paath-alert").close(); openReader(activeAlertPaath, true); });
   document.querySelectorAll("[data-close]").forEach(button => button.addEventListener("click", () => el(button.dataset.close)?.close()));
   el("paath-reader").addEventListener("close", stopSpeech);
+  el("paath-alert").addEventListener("cancel", stopChime);
 })();
