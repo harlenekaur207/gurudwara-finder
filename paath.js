@@ -10,6 +10,7 @@
   const esc = value => String(value ?? "").replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
   const defaults = Object.fromEntries(Object.entries(PAATHS).map(([id, p]) => [id, {time:p.defaultTime, enabled:true}]));
   let reminders = {...defaults, ...JSON.parse(localStorage.getItem("sangat-paath-reminders") || "{}")};
+  let chimeSettings = {style:"waheguru", volume:90, ...JSON.parse(localStorage.getItem("sangat-chime-settings") || "{}")};
   let currentPaath = "japji", currentLanguage = "punjabi", currentVerses = [], wordTimer = null, activeAlertPaath = "japji", hukamData = null;
 
   function saveReminders() {
@@ -38,14 +39,47 @@
     });
     updateNextReminder();
   }
+  function saveChimeSettings() {
+    localStorage.setItem("sangat-chime-settings", JSON.stringify(chimeSettings));
+    el("chime-volume-value").textContent = `${chimeSettings.volume}%`;
+    const label = {waheguru:"Waheguru chime", temple:"temple chime", gentle:"gentle bell"}[chimeSettings.style];
+    el("test-chime").textContent = `Test ${label}`;
+  }
+  function hydrateChimeSettings() {
+    chimeSettings.volume = Math.max(10, Math.min(100, Number(chimeSettings.volume) || 90));
+    if (!['waheguru', 'temple', 'gentle'].includes(chimeSettings.style)) chimeSettings.style = "waheguru";
+    el("chime-style").value = chimeSettings.style; el("chime-volume").value = chimeSettings.volume; saveChimeSettings();
+    el("chime-style").addEventListener("change", event => { chimeSettings.style = event.target.value; saveChimeSettings(); });
+    el("chime-volume").addEventListener("input", event => { chimeSettings.volume = Number(event.target.value); saveChimeSettings(); });
+  }
+  function speakWaheguru() {
+    if (!("speechSynthesis" in window)) return;
+    speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance("Waheguru");
+    utterance.lang = "pa-IN"; utterance.rate = .72; utterance.pitch = .92; utterance.volume = chimeSettings.volume / 100;
+    const voices = speechSynthesis.getVoices();
+    utterance.voice = voices.find(voice => voice.lang.toLowerCase().startsWith("pa")) || voices.find(voice => voice.lang.toLowerCase().startsWith("hi")) || voices.find(voice => voice.lang.toLowerCase().startsWith("en-in")) || null;
+    speechSynthesis.speak(utterance);
+  }
   function playChime() {
     const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-    if (!AudioContextClass) return;
-    const context = new AudioContextClass(), gain = context.createGain(); gain.connect(context.destination); gain.gain.setValueAtTime(.0001, context.currentTime);
-    [523.25, 659.25, 783.99].forEach((frequency, index) => {
-      const oscillator = context.createOscillator(); oscillator.type = "sine"; oscillator.frequency.value = frequency; oscillator.connect(gain); oscillator.start(context.currentTime + index * .18); oscillator.stop(context.currentTime + .65 + index * .18);
+    if (!AudioContextClass) { if (chimeSettings.style === "waheguru") speakWaheguru(); return; }
+    const context = new AudioContextClass(), master = context.createGain(), volume = chimeSettings.volume / 100;
+    master.connect(context.destination); master.gain.setValueAtTime(.0001, context.currentTime);
+    const patterns = {
+      waheguru: {notes:[523.25,659.25,783.99,1046.5], spacing:.16, length:1.05, wave:"triangle", level:.42},
+      temple: {notes:[659.25,783.99,987.77,1318.51], spacing:.13, length:1.25, wave:"sine", level:.46},
+      gentle: {notes:[392,523.25,659.25], spacing:.24, length:1.4, wave:"sine", level:.26}
+    };
+    const pattern = patterns[chimeSettings.style] || patterns.waheguru;
+    pattern.notes.forEach((frequency, index) => {
+      const oscillator = context.createOscillator(), noteGain = context.createGain(), start = context.currentTime + index * pattern.spacing;
+      oscillator.type = pattern.wave; oscillator.frequency.value = frequency; noteGain.gain.setValueAtTime(.0001, start); noteGain.gain.exponentialRampToValueAtTime(.75, start + .025); noteGain.gain.exponentialRampToValueAtTime(.0001, start + pattern.length);
+      oscillator.connect(noteGain); noteGain.connect(master); oscillator.start(start); oscillator.stop(start + pattern.length + .05);
     });
-    gain.gain.exponentialRampToValueAtTime(.16, context.currentTime + .03); gain.gain.exponentialRampToValueAtTime(.0001, context.currentTime + 1.05); setTimeout(() => context.close(), 1300);
+    master.gain.exponentialRampToValueAtTime(Math.max(.025, pattern.level * volume), context.currentTime + .03); master.gain.exponentialRampToValueAtTime(.0001, context.currentTime + 2.05);
+    if (chimeSettings.style === "waheguru") setTimeout(speakWaheguru, 720);
+    setTimeout(() => context.close(), 2400);
   }
   async function enableNotifications() {
     if (!("Notification" in window)) { el("reminder-status").textContent = "This browser does not support notifications. The on-page alarm will still work while the app is open."; return; }
@@ -134,7 +168,7 @@
     }
   }
 
-  hydrateReminders(); loadHukam(); checkReminders(); setInterval(checkReminders, 20000);
+  hydrateReminders(); hydrateChimeSettings(); loadHukam(); checkReminders(); setInterval(checkReminders, 20000);
   el("enable-reminders").addEventListener("click", enableNotifications); el("test-chime").addEventListener("click", playChime);
   document.querySelectorAll("[data-open-paath]").forEach(button => button.addEventListener("click", () => openReader(button.dataset.openPaath, button.dataset.mode === "listen")));
   el("reader-language").addEventListener("change", event => { currentLanguage = event.target.value; stopSpeech(); renderReader(); }); el("play-paath").addEventListener("click", speakPaath); el("stop-paath").addEventListener("click", stopSpeech);
