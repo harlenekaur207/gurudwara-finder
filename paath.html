@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Set Paath reminders, read or listen with word guidance, and view today’s Hukamnama.">
+  <title>Paath — Sangat</title>
+  <link rel="stylesheet" href="styles.css?v=14">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">ੴ</span><span>Sangat</span></a>
+    <nav><a href="index.html#explore">Explore</a><a href="index.html#events">Events</a><a class="active-page" href="paath.html" aria-current="page">Paath</a><a href="index.html">Gurudwara Finder</a></nav>
+    <a class="outline-button page-link desktop-only" href="index.html">Find a Gurudwara</a>
+  </header>
+
+  <main id="top">
+    <section class="paath-section paath-page" id="paath">
+      <div class="section-heading paath-heading">
+        <div><p class="eyebrow">Your daily practice</p><h1>Paath, at the right moment.</h1></div>
+        <p>Set reminders, read in the script that feels most comfortable, or listen with word-by-word guidance.</p>
+      </div>
+
+      <div class="paath-dashboard">
+        <article class="reminder-panel">
+          <div class="panel-title-row"><div><p class="eyebrow">Paath reminders</p><h3 id="next-paath">Your daily rhythm</h3></div><span class="reminder-bell" aria-hidden="true">◔</span></div>
+          <p class="panel-intro">Choose your local times. Settings stay on this device.</p>
+          <div class="reminder-list" id="reminder-list">
+            <label class="reminder-row"><span><strong>Japji Sahib</strong><small>Morning</small></span><input type="time" data-reminder-time="japji"><input class="switch-input" type="checkbox" data-reminder-toggle="japji" aria-label="Enable Japji Sahib reminder"></label>
+            <label class="reminder-row"><span><strong>Rehras Sahib</strong><small>Evening</small></span><input type="time" data-reminder-time="rehras"><input class="switch-input" type="checkbox" data-reminder-toggle="rehras" aria-label="Enable Rehras Sahib reminder"></label>
+            <label class="reminder-row"><span><strong>Kirtan Sohila</strong><small>Before rest</small></span><input type="time" data-reminder-time="sohila"><input class="switch-input" type="checkbox" data-reminder-toggle="sohila" aria-label="Enable Kirtan Sohila reminder"></label>
+          </div>
+          <div class="chime-settings" aria-label="Alarm sound settings">
+            <label class="chime-control"><span><strong>Alarm sound</strong><small>Choose what you hear at Paath time</small></span><select id="chime-style"><option value="waheguru">Waheguru voice + chime</option><option value="temple">Bright temple chime</option><option value="gentle">Gentle bell</option></select></label>
+            <label class="chime-control volume-control"><span><strong>Chime volume</strong><small id="chime-volume-value">90%</small></span><input id="chime-volume" type="range" min="10" max="100" step="5" value="90" aria-label="Chime volume"></label>
+          </div>
+          <div class="reminder-actions"><button class="primary-button" id="enable-reminders">Enable alarm notifications</button><button class="quiet-button" id="test-chime">Test chime</button></div>
+          <p class="reminder-status" id="reminder-status" aria-live="polite">Alarms work while this page is open. Browser notifications can appear in the background when permitted.</p>
+        </article>
+
+        <article class="hukam-card">
+          <div class="hukam-glow" aria-hidden="true">ੴ</div>
+          <p class="eyebrow">From Sri Harmandir Sahib</p>
+          <div class="hukam-title-row"><div><h3>Today’s Hukamnama</h3><p id="hukam-date">Loading the latest selection…</p></div><span id="hukam-ang" class="ang-pill">—</span></div>
+          <p class="hukam-meta" id="hukam-meta">Sri Darbar Sahib, Amritsar</p>
+          <div class="language-tabs" aria-label="Hukamnama reading language"><button class="active" data-hukam-language="punjabi">ਪੰਜਾਬੀ</button><button data-hukam-language="hindi">हिंदी</button><button data-hukam-language="english">English</button></div>
+          <div class="hukam-lines" id="hukam-lines" aria-live="polite"><p>Connecting to the daily Hukamnama source…</p></div>
+          <div class="hukam-actions"><a href="https://www.sikhnet.com/hukam?vm=today" target="_blank" rel="noopener noreferrer">Read the complete Hukamnama ↗</a><a href="https://hs.sgpc.net/" target="_blank" rel="noopener noreferrer">Official SGPC audio ↗</a></div>
+          <p class="source-note">Daily selection supplied by GurbaniNow from Sri Darbar Sahib. Verify against the official SGPC source.</p>
+        </article>
+      </div>
+
+      <div class="paath-library-heading"><div><p class="eyebrow">Guided Paath</p><h3>Read or listen</h3></div><p>Begin with a guided opening selection. Device narration highlights each word as it is read.</p></div>
+      <div class="paath-library">
+        <article class="paath-card"><span class="paath-time">Morning</span><div class="paath-symbol">ੴ</div><h3>Japji Sahib</h3><p>Begin the day in remembrance, reflection, and gratitude.</p><div><button data-open-paath="japji" data-mode="read">Read</button><button data-open-paath="japji" data-mode="listen">▶ Listen</button></div></article>
+        <article class="paath-card warm"><span class="paath-time">Evening</span><div class="paath-symbol">ਸੋ</div><h3>Rehras Sahib</h3><p>Pause at day’s end and return the mind to the Guru.</p><div><button data-open-paath="rehras" data-mode="read">Read</button><button data-open-paath="rehras" data-mode="listen">▶ Listen</button></div></article>
+        <article class="paath-card dark"><span class="paath-time">Before rest</span><div class="paath-symbol">ਸੋਹਿਲਾ</div><h3>Kirtan Sohila</h3><p>Close the day with trust, stillness, and gratitude.</p><div><button data-open-paath="sohila" data-mode="read">Read</button><button data-open-paath="sohila" data-mode="listen">▶ Listen</button></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="index.html"><span class="brand-mark">ੴ</span><span>Sangat</span></a><p>Made with seva for the global Sikh community.</p><p class="demo-note"><a href="index.html">Return to the Gurudwara Finder →</a></p></footer>
+
+  <dialog id="paath-reader" class="dialog-shell paath-reader"><button class="close-button" data-close="paath-reader" aria-label="Close">×</button><p class="eyebrow" id="reader-time">Daily Paath</p><h2 id="reader-title">Japji Sahib</h2><p class="reader-note">Guided opening selection</p><div class="reader-toolbar"><label>Reading language<select id="reader-language"><option value="punjabi">Punjabi · Gurmukhi</option><option value="hindi">Hindi · Devanagari</option><option value="roman">English Punjabi · Roman</option></select></label><div class="reader-controls"><button class="primary-button" id="play-paath">▶ Play &amp; follow</button><button class="quiet-button" id="stop-paath">Stop</button></div></div><div class="paath-text" id="paath-text" tabindex="0"></div><p class="reader-disclaimer">Audio uses a voice available on this device and may not reproduce traditional pronunciation perfectly.</p></dialog>
+  <dialog id="paath-alert" class="dialog-shell paath-alert"><div class="alarm-icon">ੴ</div><p class="eyebrow">Paath reminder</p><h2 id="alert-title">It is time for Paath</h2><p id="alert-copy">Take a quiet moment for your daily practice.</p><div class="alert-actions"><button class="primary-button" id="alert-listen">▶ Listen</button><button class="outline-button" id="alert-read">Read</button><button class="quiet-button" id="dismiss-alert">Not now</button></div></dialog>
+  <script src="paath.js?v=3"></script>
+</body>
+</html>
