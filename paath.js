@@ -174,5 +174,6 @@
   el("reader-language").addEventListener("change", event => { currentLanguage = event.target.value; stopSpeech(); renderReader(); }); el("play-paath").addEventListener("click", speakPaath); el("stop-paath").addEventListener("click", stopSpeech);
   document.querySelectorAll("[data-hukam-language]").forEach(button => button.addEventListener("click", () => { document.querySelectorAll("[data-hukam-language]").forEach(item => item.classList.toggle("active", item === button)); renderHukam(button.dataset.hukamLanguage); }));
   el("dismiss-alert").addEventListener("click", () => el("paath-alert").close()); el("alert-read").addEventListener("click", () => { el("paath-alert").close(); openReader(activeAlertPaath); }); el("alert-listen").addEventListener("click", () => { el("paath-alert").close(); openReader(activeAlertPaath, true); });
+  document.querySelectorAll("[data-close]").forEach(button => button.addEventListener("click", () => el(button.dataset.close)?.close()));
   el("paath-reader").addEventListener("close", stopSpeech);
 })();
